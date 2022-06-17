@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> -- {{fname}} {{lname}} -- 
+      <div style="margin-left:200px ;">
+        <ion-button (click)="logout()">
+          <ion-icon name="log-out" class="larger"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu">
+      </ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form action="" method="post" name="forms" [formGroup]="forms" >
+    <ion-grid>
+      <ion-row>
+        <ion-col size-md="6" offset-md="3">
+          <div>
+            <ion-card >
+              <ion-card-header>
+                <ion-card-title color="primary" style="font-size: 2em;">TaskForm</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+              <div class="email-login">
+              <div class="formfield"  *ngFor="let item of form2 | keyvalue">
+                <ion-item  style="margin-top: 20px;">
+                    <ion-label position="floating" style="font-size: 1.2em;" *ngIf="item.key != 'valid'">{{item.key}}</ion-label>
+                    <ion-input  name={{item.key}}  id={{item.key}} value={{item.value.value}}  *ngIf="item.key !== 'valid' && item.key !== 'justificatif'" ></ion-input>
+                </ion-item>
+              </div>
+              <div class="formfield" *ngIf="show1">
+                <ion-item  style="margin-top: 20px;">
+                  <ion-label position="floating" style="font-size: 1.2em;">justificatif</ion-label>
+                  <ion-input type="text" name=justificatif [(ngModel)]="justificatif" [ngModelOptions]="{standalone: true}" ></ion-input>
+                </ion-item>
+              </div>
+   <div style="margin-left:100px ;margin-top: 20px;" *ngIf="show2">
+    <p>valid</p><ion-checkbox (ionChange)="checkboxClick($event)"></ion-checkbox>
+    </div>
+
+  <div class="login-button" >
+    <ion-button class="login" type="submit"  (click)="OnCreate()" >Complete task</ion-button>
+  </div>
+</div>
+</ion-card-content></ion-card></div></ion-col></ion-row></ion-grid>
+</form>
+
+
+</ion-content>

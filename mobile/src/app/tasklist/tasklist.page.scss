@@ -1,0 +1,36 @@
+.heading{
+    margin-top: 10vh;
+    text-align: center;
+    h1{
+        font-size: 2rem;
+    }
+}
+.larger {
+    font-size: 30px;
+}
+.email-login {
+    margin-top: 45px;
+    text-align: center;
+    p{
+        color: #838383;
+    }
+    .login{
+        width: 85%;
+        height: 50px;
+        text-transform: none;
+        font-size: 1.6rem;
+    }
+}
+.image{
+    margin-left: 15%;
+}
+button{
+    background: none;
+    color: #838383;
+    font-size: large;
+    text-align: center !important;
+}
+
+ion-icon {
+    font-size: 30px; //Preferred size here
+}

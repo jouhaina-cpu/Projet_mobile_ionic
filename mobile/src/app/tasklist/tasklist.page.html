@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>  -- {{firstName}} {{lastName}} -- 
+      <div style="margin-left:200px ;">
+        <ion-button (click)="logout()">
+          <ion-icon name="log-out" class="larger"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu">
+      </ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card mode='ios' *ngFor='let item of info'>
+  <ion-card-header >
+     <button (click)="Chercher(item.id)">
+      {{item.name}} 
+     </button>
+  </ion-card-header>
+  <ion-card-content>
+  
+  </ion-card-content>
+ </ion-card>
+</ion-content>

@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>-- {{fname}} {{lname}} -- </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu">
+      </ion-menu-button>
+    </ion-buttons>
+    <div style="margin-left:200px ;">
+    <ion-button (click)="logout()"><ion-icon name="exit-outline"></ion-icon></ion-button>
+  </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="ion-padding" scroll-y="false">
+    <ion-slides>
+      <ion-slide>
+        <div class="slide">
+          <h2>Welcome {{fname}} {{lname}}</h2>
+        </div>
+      </ion-slide>
+    </ion-slides>
+</ion-content>
+
