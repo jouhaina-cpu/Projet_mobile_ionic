@@ -1,5 +1,4 @@
 # Project-Mobile-Ionic
-A Mobile E-Learning System
 ---
 ## Frameworks
 * Ionic 
