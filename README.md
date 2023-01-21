@@ -1,4 +1,6 @@
-# Projet_mobile_ionic
+# Project-Mobile-Ionic
+
+A Mobile E-Learning System
 ---
 ## Frameworks
 * Ionic 
