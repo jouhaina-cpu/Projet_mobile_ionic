@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "9f3e5e5a-3bda-4930-8119-f2bfa4c01b38",
+		"name": "Mini projet Android",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "profile",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "agent",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "bpm",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://digitalisi.tn:8080/engine-rest/user/agent/profile",
+					"protocol": "http",
+					"host": [
+						"digitalisi",
+						"tn"
+					],
+					"port": "8080",
+					"path": [
+						"engine-rest",
+						"user",
+						"agent",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list process",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "etudiant",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "bpm",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://digitalisi.tn:8080/engine-rest/process-definition?latest=true&active=true&startableInTasklist=true&startablePermissionCheck=true&firstResult=0&maxResults=15",
+					"protocol": "http",
+					"host": [
+						"digitalisi",
+						"tn"
+					],
+					"port": "8080",
+					"path": [
+						"engine-rest",
+						"process-definition"
+					],
+					"query": [
+						{
+							"key": "latest",
+							"value": "true"
+						},
+						{
+							"key": "active",
+							"value": "true"
+						},
+						{
+							"key": "startableInTasklist",
+							"value": "true"
+						},
+						{
+							"key": "startablePermissionCheck",
+							"value": "true"
+						},
+						{
+							"key": "firstResult",
+							"value": "0"
+						},
+						{
+							"key": "maxResults",
+							"value": "15"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "form fields",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "etudiant",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "bpm",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://digitalisi.tn:8080/engine-rest/process-definition/att_presence:4:bd2b40ca-ba49-11ec-9615-8d765d216035/form-variables",
+					"protocol": "http",
+					"host": [
+						"digitalisi",
+						"tn"
+					],
+					"port": "8080",
+					"path": [
+						"engine-rest",
+						"process-definition",
+						"att_presence:4:bd2b40ca-ba49-11ec-9615-8d765d216035",
+						"form-variables"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "submit",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "etudiant",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "bpm",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"variables\": {\n    \"nom\": {\n      \"value\": \"wwwww\",\n      \"type\": \"String\",\n      \"valueInfo\": {}\n    },\n    \"prenom\": {\n      \"value\": \"a\",\n      \"type\": \"String\",\n      \"valueInfo\": {}\n    },\n    \"motif\": {\n      \"value\": \"a\",\n      \"type\": \"String\",\n      \"valueInfo\": {}\n    },\n    \"niveau\": {\n      \"value\": \"a\",\n      \"type\": \"String\",\n      \"valueInfo\": {}\n    },\n    \"groupe\": {\n      \"value\": \"aaaa\",\n      \"type\": \"String\",\n      \"valueInfo\": {}\n    }\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://digitalisi.tn:8080/engine-rest/process-definition/att_presence:4:bd2b40ca-ba49-11ec-9615-8d765d216035/submit-form",
+					"protocol": "http",
+					"host": [
+						"digitalisi",
+						"tn"
+					],
+					"port": "8080",
+					"path": [
+						"engine-rest",
+						"process-definition",
+						"att_presence:4:bd2b40ca-ba49-11ec-9615-8d765d216035",
+						"submit-form"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
